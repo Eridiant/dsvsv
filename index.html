@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Border Example</title>
+    <style>
+        .gradient-border {
+            position: relative;
+            padding: 20px;
+            background: white;
+            border-radius: 10px; /* необязательно */
+            z-index: 1;
+        }
+
+        .gradient-border::before {
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(to right, red, blue);
+            border-radius: 10px; /* необязательно */
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="gradient-border">
+        content
+    </div>
+</body>
+</html>
