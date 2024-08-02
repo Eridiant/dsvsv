@@ -24,6 +24,24 @@
             border-radius: 10px; /* необязательно */
             z-index: -1;
         }
+        div {
+            position: relative;
+            padding: 10px;
+            background: white;
+            z-index: 1;
+        }
+        
+        div::before {
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(to right, red, blue);
+            z-index: -1;
+            border-radius: 5px; /* необязательно, для скругления углов */
+        }
     </style>
 </head>
 <body>
